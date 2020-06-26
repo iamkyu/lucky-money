@@ -7,12 +7,12 @@ import com.namkyujin.lucky.core.domain.token.TokenRepository;
 import com.namkyujin.lucky.token.model.TokenCreationFailedException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@Component
+@Service
 @RequiredArgsConstructor
 public class TokenService {
     protected static final int MAX_RETRY = 3;

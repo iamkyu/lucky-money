@@ -1,0 +1,55 @@
+### (1) 뿌리기
+POST http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 1
+X-ROOM-ID: lucky
+
+{
+  "amount": 9200,
+  "totalWinners": 3
+}
+
+> {%
+    client.global.set("token", response.body.data.token); // 응답 토큰 변수로 저장
+%}
+
+
+### (2) 뿌리기 현황
+GET http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 1
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
+
+
+### (3-1) 뿌리기 줍기
+PUT http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 2
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
+
+### (3-2) 뿌리기 줍기
+PUT http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 5
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
+
+### (3-3) 뿌리기 줍기
+PUT http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 3
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
+
+
+### (3-4) 뿌리기 줍기
+PUT http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 8
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
+
+
+###
