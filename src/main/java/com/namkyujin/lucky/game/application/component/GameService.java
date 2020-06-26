@@ -4,6 +4,7 @@ import com.namkyujin.lucky.core.domain.Game;
 import com.namkyujin.lucky.core.domain.GameRepository;
 import com.namkyujin.lucky.game.model.CreateGameCommand;
 import com.namkyujin.lucky.game.model.GameRoomUser;
+import com.namkyujin.lucky.game.model.GameToken;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,13 +23,13 @@ public class GameService {
         return game;
     }
 
-    public Optional<Game> getGame(String token, String roomId) {
-        Optional<Game> maybeGame = gameRepository.findByTokenAndRoomId(token, roomId);
+    public Optional<Game> getGame(GameToken token, String roomId) {
+        Optional<Game> maybeGame = gameRepository.findByTokenAndRoomId(token.get(), roomId);
         return maybeGame;
     }
 
-    public Optional<Game> getLookUpAbleGame(String token, LocalDateTime baseDateTime) {
-        Optional<Game> maybeGame = gameRepository.findByTokenAndCreatedAtAfter(token, baseDateTime);
+    public Optional<Game> getLookUpAbleGame(GameToken token, LocalDateTime baseDateTime) {
+        Optional<Game> maybeGame = gameRepository.findByTokenAndCreatedAtAfter(token.get(), baseDateTime);
         return maybeGame;
     }
 
