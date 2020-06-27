@@ -6,6 +6,6 @@ class AllInWinningPrizeRuleTest extends WinningPrizeRuleTest {
 
     @BeforeEach
     void setUp() {
-        dut = new AllInWinningPrizeRule();
+        sut = new AllInWinningPrizeRule();
     }
 }

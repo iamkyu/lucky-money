@@ -16,19 +16,19 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 
 abstract class WinningPrizeRuleTest {
-    protected WinningPrizeRule dut;
+    protected WinningPrizeRule sut;
 
     @Test
     void shouldEmptyResultIfWinnersIsZero() {
         //when then
-        List<Integer> result = dut.createPrize(1, 0);
+        List<Integer> result = sut.createPrize(1, 0);
         assertThat(result).isEmpty();
     }
 
     @Test
     void shouldEmptyResultIfAmountIsZero() {
         //when then
-        List<Integer> result = dut.createPrize(0, 1);
+        List<Integer> result = sut.createPrize(0, 1);
         assertThat(result).isEmpty();
     }
 
@@ -42,8 +42,8 @@ abstract class WinningPrizeRuleTest {
         ));
 
         //when then
-        return amountAndWinners.stream().map(amountAndWinner -> DynamicTest.dynamicTest(ClassUtils.getShortName(dut.getClass()), () -> {
-            List<Integer> prizes = dut.createPrize(amountAndWinner.getAmount(), amountAndWinner.getTotalWinners());
+        return amountAndWinners.stream().map(amountAndWinner -> DynamicTest.dynamicTest(ClassUtils.getShortName(sut.getClass()), () -> {
+            List<Integer> prizes = sut.createPrize(amountAndWinner.getAmount(), amountAndWinner.getTotalWinners());
             assertThat(prizes).hasSize(amountAndWinner.getTotalWinners());
             assertThat(sum(prizes)).isEqualTo(amountAndWinner.getAmount());
         }));

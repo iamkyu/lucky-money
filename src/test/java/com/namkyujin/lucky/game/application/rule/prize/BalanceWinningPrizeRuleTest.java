@@ -6,6 +6,6 @@ class BalanceWinningPrizeRuleTest extends WinningPrizeRuleTest {
 
     @BeforeEach
     void setUp() {
-        dut = new BalanceWinningPrizeRule();
+        sut = new BalanceWinningPrizeRule();
     }
 }
