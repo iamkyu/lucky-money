@@ -36,8 +36,7 @@ public class TokenMeta {
         version = 0L;
     }
 
-    /* self encapsulation */
-    private void setRoomId(String roomId) {
+    /* self encapsulation */ private void setRoomId(String roomId) {
         ArgumentValidator.notEmpty(roomId, "roomId");
         this.roomId = roomId;
     }

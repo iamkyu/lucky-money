@@ -15,7 +15,7 @@ import static javax.persistence.FetchType.LAZY;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(indexes = {
-        @Index(name = "game_id_user_id", columnList = "game_id, userId", unique = true)
+        @Index(name = "uq_game_id_user_id", columnList = "game_id, userId", unique = true)
 })
 public class Winner {
     @Id
