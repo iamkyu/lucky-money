@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
 @RequestMapping(LuckyController.BASE_PATH)
 @RestController
 @RequiredArgsConstructor
