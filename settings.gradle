@@ -1,4 +1,3 @@
-rootProject.name = 'lucky-money'
-
+include 'common'
 include 'game-application'
 
