@@ -1,6 +1,6 @@
 package com.namkyujin.game.support;
 
-import com.namkyujin.game.core.domain.WinnerSequenceRepository;
+import com.namkyujin.game.domain.WinnerSequenceRepository;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;

@@ -1,6 +1,6 @@
 package com.namkyujin.game.common;
 
-import com.namkyujin.game.game.model.GameToken;
+import com.namkyujin.game.model.GameToken;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;

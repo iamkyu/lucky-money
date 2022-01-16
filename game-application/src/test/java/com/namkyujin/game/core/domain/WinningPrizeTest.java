@@ -1,5 +1,7 @@
 package com.namkyujin.game.core.domain;
 
+import com.namkyujin.game.domain.WinningPrize;
+import com.namkyujin.game.domain.WinningPrizeStatus;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

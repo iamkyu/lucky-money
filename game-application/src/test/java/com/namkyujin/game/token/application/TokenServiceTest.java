@@ -1,9 +1,10 @@
 package com.namkyujin.game.token.application;
 
-import com.namkyujin.game.core.domain.token.Token;
-import com.namkyujin.game.core.domain.token.TokenMeta;
-import com.namkyujin.game.core.domain.token.TokenMetaRepository;
-import com.namkyujin.game.core.domain.token.TokenRepository;
+import com.namkyujin.game.application.service.TokenService;
+import com.namkyujin.game.domain.Token;
+import com.namkyujin.game.domain.TokenMeta;
+import com.namkyujin.game.domain.TokenMetaRepository;
+import com.namkyujin.game.domain.TokenRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

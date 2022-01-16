@@ -2,10 +2,10 @@ package com.namkyujin.game.common;
 
 import com.namkyujin.game.common.exception.UnauthorizedGameRoomUserException;
 import com.namkyujin.game.common.model.CommonResponse;
-import com.namkyujin.game.game.model.exeception.GameClosedException;
-import com.namkyujin.game.game.model.exeception.GameNotExistException;
-import com.namkyujin.game.game.model.exeception.ParticipateRestrictException;
-import com.namkyujin.game.game.model.exeception.WinningPrizeNotExistException;
+import com.namkyujin.game.application.service.GameClosedException;
+import com.namkyujin.game.application.service.GameNotExistException;
+import com.namkyujin.game.application.service.ParticipateRestrictException;
+import com.namkyujin.game.application.service.WinningPrizeNotExistException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

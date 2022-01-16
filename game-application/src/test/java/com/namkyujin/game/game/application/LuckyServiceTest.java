@@ -1,20 +1,23 @@
 package com.namkyujin.game.game.application;
 
+import com.namkyujin.game.application.service.LuckyService;
 import com.namkyujin.game.common.exception.UnauthorizedGameRoomUserException;
-import com.namkyujin.game.core.domain.Game;
-import com.namkyujin.game.core.domain.Winner;
-import com.namkyujin.game.core.domain.WinningPrize;
-import com.namkyujin.game.game.application.component.GameService;
-import com.namkyujin.game.game.application.component.WinnerRecordService;
-import com.namkyujin.game.game.application.component.WinningPrizeService;
-import com.namkyujin.game.game.model.CreatedGamePresentation;
-import com.namkyujin.game.game.model.GameRoomUser;
-import com.namkyujin.game.game.model.GameStatusPresentation;
-import com.namkyujin.game.game.model.GameToken;
-import com.namkyujin.game.game.model.exeception.GameNotExistException;
-import com.namkyujin.game.game.model.exeception.ParticipateRestrictException;
+import com.namkyujin.game.domain.Game;
+import com.namkyujin.game.domain.Winner;
+import com.namkyujin.game.domain.WinningPrize;
+import com.namkyujin.game.application.service.GameService;
+import com.namkyujin.game.application.service.WinnerRecordService;
+import com.namkyujin.game.application.service.WinningPrizeService;
+import com.namkyujin.game.model.CreateGameCommand;
+import com.namkyujin.game.model.CreatedGamePresentation;
+import com.namkyujin.game.model.GameRoomUser;
+import com.namkyujin.game.model.GameStatusPresentation;
+import com.namkyujin.game.model.GameToken;
+import com.namkyujin.game.application.service.GameNotExistException;
+import com.namkyujin.game.application.service.ParticipateRestrictException;
+import com.namkyujin.game.model.WinningPrizePresentation;
 import com.namkyujin.game.support.TestInMemoryWinnerSequenceRepository;
-import com.namkyujin.game.token.application.TokenService;
+import com.namkyujin.game.application.service.TokenService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

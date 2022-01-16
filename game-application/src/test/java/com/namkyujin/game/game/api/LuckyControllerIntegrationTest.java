@@ -1,7 +1,8 @@
 package com.namkyujin.game.game.api;
 
-import com.namkyujin.game.game.model.api.CreateGameRequest;
+import com.namkyujin.game.web.model.CreateGameRequest;
 import com.namkyujin.game.support.IntegrationTest;
+import com.namkyujin.game.web.LuckyController;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.DisplayName;
