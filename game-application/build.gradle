@@ -5,6 +5,7 @@ dependencies {
     implementation 'javax.validation:validation-api'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
+    testImplementation 'de.adesso:junit-insights:1.1.0'
     testImplementation 'org.assertj:assertj-core'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.0.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-params:5.0.1'
