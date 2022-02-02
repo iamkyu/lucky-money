@@ -21,6 +21,12 @@ X-USER-ID: 1
 X-ROOM-ID: lucky
 X-GAME-TOKEN: {{token}}
 
+### (3-0) 뿌리기 줍기 (자기자신)
+PUT http://localhost:8080/v1/lucky
+Content-Type: application/json
+X-USER-ID: 1
+X-ROOM-ID: lucky
+X-GAME-TOKEN: {{token}}
 
 ### (3-1) 뿌리기 줍기
 PUT http://localhost:8080/v1/lucky
@@ -44,7 +50,7 @@ X-ROOM-ID: lucky
 X-GAME-TOKEN: {{token}}
 
 
-### (3-4) 뿌리기 줍기
+### (3-4) 뿌리기 줍기 (인원 초과)
 PUT http://localhost:8080/v1/lucky
 Content-Type: application/json
 X-USER-ID: 8

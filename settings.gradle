@@ -1,1 +1,5 @@
-rootProject.name = 'lucky-money'
+include 'common'
+include 'game-application'
+include 'game-configuration'
+include 'adapters:game-persistence'
+include 'adapters:game-web'

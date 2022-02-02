@@ -1,0 +1,20 @@
+plugins {
+    id "org.springframework.boot" version "2.3.1.RELEASE"
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':game-application')
+    implementation project(':adapters:game-persistence')
+    implementation project(':adapters:game-web')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'de.adesso.junitinsights.enabled', 'true'
+}

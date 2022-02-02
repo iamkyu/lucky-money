@@ -1,41 +1,36 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.1.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-    id 'java'
+    id "io.spring.dependency-management" version "1.0.8.RELEASE"
 }
 
-group = 'com.namkyujin'
-version = '1.0.0'
-sourceCompatibility = '1.8'
+subprojects {
+    group = 'com.namkyujin'
+    version = '1.0.0'
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java-library'
+
+    repositories {
+        jcenter()
     }
-}
 
-repositories {
-    mavenCentral()
-}
+    // see https://docs.spring.io/dependency-management-plugin/docs/current/reference/html/
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE")
+        }
+    }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    // Validation Starter no longer included in web starters (ƒrom Spring Boot 2.3)
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'it.ozimov:embedded-redis:0.7.2'
-    implementation 'org.apache.httpcomponents:httpclient'
+    compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
-
-    runtimeOnly 'com.h2database:h2'
-
-    testImplementation 'org.assertj:assertj-core'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
     }
 }
